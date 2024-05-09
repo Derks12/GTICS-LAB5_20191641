@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface TecnicosRepository extends JpaRepository<technician, Integer> {
 
-
+    List<technician> findByFirstName(String FirstName);
 
 }

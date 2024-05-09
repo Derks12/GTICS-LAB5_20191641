@@ -6,7 +6,7 @@
         <div class="col-md-6 offset-md-3">
             <h2>Nuevo Tecnico</h2>
             <hr/>
-            <form method="post" th:action="@{/Tecnicos/save}" th:object="${product}">
+            <form method="post" th:action="@{/Tecnicos/save}" th:object="${technician}">
                 <div class="mb-3">
                     <label for="productname" class="form-label">Nombre del Producto</label>
                     <input type="text" class="form-control" id="productname" th:field="*{productname}"
