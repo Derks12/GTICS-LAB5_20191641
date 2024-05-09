@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6 offset-md-3">
+            <h2>Nuevo Tecnico</h2>
+            <hr/>
+            <form method="post" th:action="@{/Tecnicos/save}" th:object="${product}">
+                <div class="mb-3">
+                    <label for="productname" class="form-label">Nombre del Producto</label>
+                    <input type="text" class="form-control" id="productname" th:field="*{productname}"
+                           th:classappend="${#fields.hasErrors('productname')?'is-invalid':''}">
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('productname')}"
+                         th:errors="*{productname}" ></div>
+                </div>
+
+                <a th:href="@{'/product'}" class="btn btn-danger">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
